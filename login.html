@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Login to LandingPageCopywriter</title>
+		<link
+			rel="shortcut icon"
+			href="nobg-logo.png"
+			type="image/x-icon"
+		/>
+		<meta
+			name="description"
+			content="Seemlessly generate all the text & images content for your next landing page!"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="output.css"
+		/>
+	</head>
+	<body
+		class="text-white bg-gray-800 subpixel-antialiased bricolage-grotesque-light"
+	>
+		<nav
+			class="absolute bg-gray-700/50 backdrop-blur-md text-white w-full flex items-center justify-start border-b-4 border-gray-700"
+		>
+			<div class="w-2/3 flex items-center">
+				<img
+					src="logo.png"
+					class="mx-5 drop-shadow-2xl"
+					width="75"
+				/>
+				<h1 class="text-4xl bricolage-grotesque-bolder m-5">
+					<span class="text-[#53BF9D]">Landing</span
+					><span class="text-[#FFF4A3]">Page</span><span>Copywriter</span>
+				</h1>
+			</div>
+		</nav>
+		<form
+			class="grid w-2/5 mx-auto p-5 rounded-sm gap-5 h-dvh items-center content-center"
+		>
+			<div class="grid gap-1">
+				<label
+					for="email"
+					class="text-xl opacity-80"
+					>Enter your email address</label
+				>
+				<input
+					class="text-lg w-2/3 rounded-md px-2 py-0.5 bg-transparent border-2 border-solid border-gray-900"
+					id="email"
+					name="email"
+					type="email"
+					placeholder="some@coolperson.me"
+				/>
+			</div>
+			<div class="grid gap-1">
+				<label
+					for="password"
+					class="text-xl opacity-80"
+					>Enter your password</label
+				>
+
+				<input
+					class="text-lg w-2/3 rounded-md px-2 py-0.5 bg-transparent border-2 border-solid border-gray-900"
+					id="password"
+					name="password"
+					type="password"
+					placeholder="●●●●●●●●"
+				/>
+			</div>
+			<button
+				class="transition-all ease-out bg-[#AC4062] rounded-md mt-10 px-4 py-0.5 text-xl w-2/5 self-center justify-self-center"
+				onclick="login(this)"
+				type="button"
+			>
+				Log In
+			</button>
+			<br />
+		</form>
+		<p
+			id="login_error"
+			class="absolute z-10 top-1/4 bottom-0 right-1/2 text-red-500 bg-gray-700 h-min p-5 py-2 rounded-md opacity-0 transition-all"
+		>
+			Wrong login credentials!
+		</p>
+	</body>
+	<script>
+		const emailEl = document.getElementById('email');
+		const passwordEl = document.getElementById('password');
+
+		const loginErrorEl = document.getElementById('login_error');
+
+		//CHANGE login url
+		const url = 'http://localhost:5000/login';
+
+		function login(el) {
+			el.classList.add('logging-in');
+
+			fetch(url, {
+				method: 'POST',
+				credentials: 'include',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					email: emailEl.value,
+					password: passwordEl.value,
+				}),
+			}).then((response) => {
+				el.classList.remove('logging-in');
+
+				response.json().then((result) => {
+					if (response.status != 200) {
+						loginErrorEl.textContent = result['error'];
+						loginErrorEl.classList.add('login-error');
+						return;
+					}
+					location.href = '/src';
+				});
+			});
+		}
+	</script>
+</html>

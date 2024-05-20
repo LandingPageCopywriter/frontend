@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<title>Result</title>
+		<link
+			rel="shortcut icon"
+			href="nobg-logo.png"
+			type="image/x-icon"
+		/>
+		<meta
+			name="description"
+			content="Seemlessly generate all the text & images content for your next landing page!"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="output.css"
+		/>
+		<style>
+			.review-content:before {
+				content: '❝';
+			}
+			.review-content:after {
+				content: '❞';
+			}
+		</style>
+	</head>
+	<body class="text-white bg-gray-800 subpixel-antialiased bricolage-grotesque">
+		<header
+			class="flex w-11/12 mx-auto gap-10 items-center justify-around h-dvh"
+		>
+			<div class="grid grid-rows-2 items-center">
+				<div class="grid gap-5">
+					<h1
+						id="headline"
+						class="text-7xl"
+					>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					</h1>
+					<h3
+						id="subheadline"
+						class="text-3xl"
+					>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+						corrupti quo animi, vero ea sapiente.
+					</h3>
+				</div>
+				<button
+					id="CTA"
+					class="bricolage-grotesque-light text-2xl rounded-md bg-gradient-to-r from-[#749eba] via-[#53BF9D] to-[#53BF9D] w-max px-4 py-1.5 mx-20"
+				>
+					Lorem ipsum dolor sit amet consectetur
+				</button>
+			</div>
+			<div
+				class="self-start my-20 grid items-start bg-[#081253] text-[#53BF9D] opacity-75 w-1/3 h-3/4 text-3xl text-opacity-70 select-none text-start font-mono p-10 invert"
+			>
+				> an image showing your product in use for better conversion rates
+			</div>
+		</header>
+		<section class="flex w-3/4 mx-auto gap-20 justify-around">
+			<div
+				id="benefit-1"
+				class="w-1/3 grid py-5 px-3 gap-5 rounded-lg bg-[#FFF4A3]/70"
+			>
+				<img
+					src="icon-placeholder.svg"
+					alt=""
+					width="32"
+					class="mx-auto"
+				/>
+				<h4 class="b-title text-4xl text-center text-[#53BF9D] invert">
+					benefit
+				</h4>
+				<p class="text-xl text-center">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+					aperiam doloremque assumenda quaerat voluptates ea voluptate totam
+					provident dignissimos illum.
+				</p>
+			</div>
+			<div
+				id="benefit-2"
+				class="w-1/3 grid py-5 px-3 gap-5 rounded-lg bg-[#FFF4A3]/70"
+			>
+				<img
+					src="icon-placeholder.svg"
+					alt=""
+					width="32"
+					class="mx-auto"
+				/>
+				<h4 class="b-title text-4xl text-center text-[#53BF9D] invert">
+					benefit
+				</h4>
+				<p class="text-xl text-center">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+					aperiam doloremque assumenda quaerat voluptates ea voluptate totam
+					provident dignissimos illum.
+				</p>
+			</div>
+			<div
+				id="benefit-3"
+				class="w-1/3 grid py-5 px-3 gap-5 rounded-lg bg-[#FFF4A3]/70"
+			>
+				<img
+					src="icon-placeholder.svg"
+					alt=""
+					width="32"
+					class="mx-auto"
+				/>
+				<h4 class="b-title text-4xl text-center text-[#53BF9D] invert">
+					benefit
+				</h4>
+				<p class="text-xl text-center">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+					aperiam doloremque assumenda quaerat voluptates ea voluptate totam
+					provident dignissimos illum.
+				</p>
+			</div>
+		</section>
+		<h2 class="bricolage-grotesque-light text-3xl text-center my-20">
+			Reviews
+		</h2>
+		<section class="bg-gray-700 py-5 w-full">
+			<div class="flex w-10/12 gap-5 mx-auto justify-around">
+				<p
+					id="review-1"
+					class="review-content text-lg opacity-80"
+				>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+					perferendis aut, suscipit modi autem earum asperiores maxime itaque
+					nesciunt aliquam explicabo voluptatum quos fugit culpa vitae illo,
+					reprehenderit corrupti labore!
+				</p>
+				<p
+					id="review-2"
+					class="review-content text-lg opacity-80"
+				>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+					perferendis aut, suscipit modi autem earum asperiores maxime itaque
+					nesciunt aliquam explicabo voluptatum quos fugit culpa vitae illo,
+					reprehenderit corrupti labore!
+				</p>
+				<p
+					id="review-3"
+					class="review-content text-lg opacity-80"
+				>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+					perferendis aut, suscipit modi autem earum asperiores maxime itaque
+					nesciunt aliquam explicabo voluptatum quos fugit culpa vitae illo,
+					reprehenderit corrupti labore!
+				</p>
+			</div>
+		</section>
+		<footer class="py-10 opacity-0"><hr /></footer>
+		<script>
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+
+			const headline = urlParams.get('headline');
+			const subheadline = urlParams.get('subheadline');
+			const CTA = urlParams.get('CTA');
+			const benefits = urlParams.get('benefits');
+			const reviews = urlParams.get('reviews');
+
+			const headlineEl = document.getElementById('headline');
+			const subheadlineEl = document.getElementById('subheadline');
+			const CTAEl = document.getElementById('CTA');
+
+			const benefit1El = document.getElementById('benefit-1');
+			const benefit2El = document.getElementById('benefit-2');
+			const benefit3El = document.getElementById('benefit-3');
+
+			const review1El = document.getElementById('review-1');
+			const review2El = document.getElementById('review-2');
+			const review3El = document.getElementById('review-3');
+
+			headlineEl.textContent = headline;
+			subheadlineEl.textContent = subheadline;
+			CTAEl.textContent = CTA;
+
+			let benefitsJsonified = JSON.parse(benefits);
+
+			benefit1El.getElementsByClassName('b-title')[0].textContent =
+				benefitsJsonified[0]['title'];
+			benefit1El.lastElementChild.textContent = benefitsJsonified[0]['text'];
+
+			benefit2El.getElementsByClassName('b-title')[0].textContent =
+				benefitsJsonified[1]['title'];
+			benefit2El.lastElementChild.textContent = benefitsJsonified[1]['text'];
+
+			benefit3El.getElementsByClassName('b-title')[0].textContent =
+				benefitsJsonified[2]['title'];
+			benefit3El.lastElementChild.textContent = benefitsJsonified[2]['text'];
+
+			let reviewsJsonified = JSON.parse(reviews);
+			review1El.textContent = reviewsJsonified[0];
+			review2El.textContent = reviewsJsonified[1];
+			review3El.textContent = reviewsJsonified[2];
+		</script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Copywriter</title>
+
+		<meta
+			name="description"
+			content="Seemlessly generate all the text & images content for your next landing page!"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='content_page_styling.css') }}"
+		/>
+	</head>
+	<body class="bricolage-grotesque"></body>
+	<style></style>
+	<script>
+		function decodeHtml(html) {
+			var txt = document.createElement('textarea');
+			txt.innerHTML = html;
+			return txt.value;
+		}
+
+		// prettier-ignore
+		let generatedCopywritingContent = decodeHtml(`{{ copywrite_result }}`);
+		let responseObj = JSON.parse(generatedCopywritingContent);
+	</script>
+</html>

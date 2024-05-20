@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	class="scroll-smooth"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>LandingPageCopywriter</title>
+		<link
+			rel="shortcut icon"
+			href="imgs/nobg-logo.png"
+			type="image/x-icon"
+		/>
+		<meta
+			name="description"
+			content="Seemlessly generate all the text & images content for your next landing page!"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/output.css"
+		/>
+	</head>
+	<body class="subpixel-antialiased">
+		<nav
+			class="absolute bg-gray-700/50 backdrop-blur-md text-white w-full flex items-center justify-start border-b-4 border-gray-700"
+		>
+			<div class="w-2/3 flex items-center">
+				<img
+					src="imgs/logo.png"
+					class="mx-5 drop-shadow-2xl"
+					width="75"
+				/>
+				<h1 class="text-4xl bricolage-grotesque-bolder m-5">
+					<span class="text-[#53BF9D]">Landing</span
+					><span class="text-[#FFF4A3]">Page</span><span>Copywriter</span>
+				</h1>
+			</div>
+			<div class="w-full flex items-center justify-start gap-20 h-12">
+				<a
+					id="loggedIn_indicator"
+					class="hidden text-[#53BF9D] invert bricolage-grotesque-bold text-3xl hover:-skew-y-3 hover:scale-105"
+					href
+				>
+					Log Out
+				</a>
+				<a
+					id="login_btn"
+					class="text-[#FFF4A3] bricolage-grotesque-bold text-3xl hover:-skew-y-3 hover:scale-105"
+					href="login.html"
+					>Log In</a
+				>
+				<a
+					class="text-[#FFF4A3] bricolage-grotesque-bold text-3xl hover:-skew-y-3 hover:scale-105"
+					href="#pricing"
+					>Pricing</a
+				>
+			</div>
+		</nav>
+		<header
+			class="flex mx-auto justify-around w-full h-dvh items-center bg-gray-800 px-20 gap-20"
+		>
+			<p
+				id="upgrade_plan"
+				class="opacity-0 pointer-events-none transition-all absolute top-1/4 bottom-0 start-56 text-green-200 text-lg bg-gray-700 h-min px-5 py-2 rounded-md"
+			>
+				Use this tool for an unlimited amount of times by
+				<a
+					href="#pricing"
+					class="text-blue-500"
+					>upgrading your plan</a
+				>
+				now!
+			</p>
+			<div
+				class="px-4 py-10 border-dashed border-2 rounded-md border-white/40 grid items-center content-center gap-6 bricolage-grotesque w-max text-xl sm:text-4xl"
+			>
+				<div class="grid gap-3">
+					<div class="flex gap-2 items-center">
+						<p class="text-[#53BF9D]">My startup is called</p>
+						<input
+							name="startup_name"
+							id="startup_name"
+							class="placeholder:text-[#53BF9D] placeholder:opacity-50 text-green-100 rounded-md outline-none p-1 bg-gray-700"
+							type="text"
+							placeholder="FitnessTracky"
+						/>
+					</div>
+					<div class="flex gap-2">
+						<p class="text-[#53BF9D]">And it's</p>
+						<textarea
+							name="and_its"
+							id="and_its"
+							class="placeholder:text-[#53BF9D] bg-gray-700 text-green-100 placeholder:opacity-50 overflow-hidden rounded-md text-xl sm:text-3xl w-2/3 outline-none p-1 h-32"
+							placeholder="an app that lets you track your progress on fitness"
+						></textarea>
+					</div>
+				</div>
+				<!-- prettier-ignore -->
+				<button class="text-center ease-out justify-self-center w-40 px-4 py-1 outline-none rounded-md 
+					bricolage-grotesque-light bg-gradient-to-r from-[#749eba] via-[#53BF9D] to-[#53BF9D]
+					text-green-100 text-xl sm:text-3xl
+					hover:bg-gradient-to-bl focus:bg-gradient-to-bl active:scale-105 active:skew-x-3
+					transition-all duration-300"
+					id="generate_btn"
+					>
+					Generate
+				</button>
+			</div>
+			<div
+				class="grid w-2/4 grid-rows-2 xl:grid-rows-3 items-center justify-center content-center"
+			>
+				<h1
+					class="self-start xl:self-center text-2xl xl:text-4xl 2xl:text-6xl lg:text-4xl bricolage-grotesque min-w-96 text-green-100"
+				>
+					Stop
+					<span class="relative whitespace-nowrap"
+						><span
+							class="absolute rounded-md bg-[#53BF9D] -left-2 -top-1 -bottom-1 -right-2 md:-left-3 md:-top-0 md:-bottom-0 md:-right-3 -rotate-1"
+						></span>
+						<span class="relative text-neutral line-through text-gray-800"
+							>overthinking</span
+						></span
+					>
+					about your landing page's text content.
+				</h1>
+				<img
+					class="w-32 rotate-90 invert"
+					src="imgs/arrow-pointing.png"
+					alt=""
+				/>
+			</div>
+		</header>
+		<main class="grid gap-40 bg-gray-800 pb-20">
+			<div class="bg-gray-800">
+				<hr class="opacity-75 py-5" />
+				<h1
+					class="text-5xl bricolage-grotesque-bolder text-center text-gradienté"
+				>
+					Pricing
+				</h1>
+			</div>
+			<section
+				id="pricing"
+				class="w-full mx-auto flex items-center justify-center gap-60 bg-gray-800 bricolage-grotesque"
+			>
+				<div class="rounded-md bg-slate-700 p-5">
+					<h3 class="text-4xl text-gradienté select-none text-center">
+						$0<span class="text-2xl"> - Free Lifetime</span>
+					</h3>
+					<ul class="text-lg text-[#FFF4A3]/80 p-5">
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2">
+							<svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+							</svg>Generate 1 page per day
+						</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>No need to Log In</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2 opacity-75 line-through"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>re-generate text</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2 opacity-75 line-through"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>re-generate images</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>Personalized customer support</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2 opacity-75 line-through"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>Creates an atom accelerator</li>
+					</ul>
+					<button
+						class="select-none cursor-not-allowed opacity-70 text-xl text-slate-800 py-1 px-2 bg-[#53BF9D] rounded-md w-full"
+					>
+						Current plan
+					</button>
+				</div>
+
+				<div class="rounded-md bg-slate-700 p-5">
+					<h3 class="text-4xl text-gradienté select-none text-center">
+						$4.99<span class="text-2xl"> - Lifetime</span>
+					</h3>
+					<ul class="text-lg text-[#FFF4A3]/80 p-5">
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>Generate unlimited amount of pages</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2 opacity-75 line-through"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>No need to Log In</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>re-generate text</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>re-generate images</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>Personalized customer support</li>
+						<!-- prettier-ignore -->
+						<li class="flex items-center gap-2 opacity-75 line-through"><svg class="flex-shrink-0 w-4 h-4 text-[#FFF4A3]/80"aria-hidden="true"xmlns="http://www.w3.org/2000/svg"fill="currentColor"viewBox="0 0 20 20"><path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+						</svg>Creates an atom accelerator</li>
+					</ul>
+					<button
+						id="upgrade_btn"
+						class="transition-all hover:invert hover:font-extralight hover:text-2xl hover:py-0.5 hover:px-1 text-xl text-slate-800 py-1 px-2 bg-[#53BF9D] rounded-md w-full outline-2 outline-dashed outline-[#53BF9D]"
+					>
+						Upgrade
+					</button>
+				</div>
+			</section>
+			<section class="w-full bg-gray-800 flex">
+				<div class="flex items-center justify-center w-1/3 gap-5 mx-auto">
+					<img
+						class="rounded-3xl self-start"
+						src="imgs/john.jpg"
+						alt=""
+					/>
+					<p class="bricolage-grotesque text-xl text-white/75 mx-auto">
+						`` I've always been scared of the part where i have to figure out
+						the words & the sentences to put in my landing page for it to
+						convert well, until this tool came up... ``
+					</p>
+				</div>
+
+				<div class="flex items-center justify-center w-1/3 gap-5 mx-auto">
+					<img
+						class="rounded-3xl self-start"
+						src="imgs/diana.jpg"
+						alt=""
+					/>
+					<p class="bricolage-grotesque text-xl text-white/75 mx-auto">
+						`` This is a life saver for me, I've always struggled to put
+						together the sentences needed for my landing page even though the
+						product was perfect ``
+					</p>
+				</div>
+			</section>
+		</main>
+	</body>
+	<script>
+		const login_btnEl = document.getElementById('login_btn');
+		const logged_in_indicEl = document.getElementById('loggedIn_indicator');
+		const upgrade_btn_El = document.getElementById('upgrade_btn');
+
+		logged_in_indicEl.onclick = (e) => {
+			fetch('http://localhost:5000/logout', {
+				credentials: 'include',
+				method: 'POST',
+			}).then((response) => location.reload());
+		};
+
+		fetch('http://localhost:5000/is_loggedIn', {
+			method: 'GET',
+			credentials: 'include',
+			headers: { 'Content-Type': 'application/json' },
+		}).then((response) => {
+			response.json().then((result) => {
+				console.log(result['isLoggedIn']);
+				if (result['isLoggedIn'] == true) {
+					login_btnEl.classList.add('hidden');
+					logged_in_indicEl.classList.remove('hidden');
+					upgrade_btn_El.textContent = 'Current plan';
+					upgrade_btn_El.classList.add('disabled');
+					upgrade_btn_El.classList.remove(
+						'hover:invert',
+						'hover:font-extralight',
+						'hover:text-2xl',
+						'hover:py-0.5',
+						'hover:px-1'
+					);
+				}
+			});
+		});
+	</script>
+	<script>
+		const startupNameEl = document.getElementById('startup_name');
+		const startupDescriptionEl = document.getElementById('and_its');
+		const generateBtnEl = document.getElementById('generate_btn');
+		const upgradePlanIndicEl = document.getElementById('upgrade_plan');
+
+		function obj_to_query(obj) {
+			var parts = [];
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					parts.push(
+						encodeURIComponent(key) +
+							'=' +
+							encodeURIComponent(JSON.stringify(obj[key]))
+					);
+				}
+			}
+			return '?' + parts.join('&');
+		}
+
+		generateBtnEl.addEventListener('click', (event) => {
+			if (
+				startupNameEl.value.replace(/\s+/g, '') == '' ||
+				startupDescriptionEl.value.replace(/\s+/g, '') == ''
+			) {
+				return;
+			}
+			event.target.classList.add('generating');
+
+			let url = encodeURI(
+				'http://localhost:5000/?startup_name=' +
+					startupNameEl.value +
+					'&and_its=' +
+					startupDescriptionEl.value
+			);
+			startupNameEl.value = '';
+			startupDescriptionEl.value = '';
+
+			fetch(url, {
+				method: 'GET',
+				credentials: 'include',
+			}).then((response) => {
+				response.json().then((result) => {
+					event.target.classList.remove('generating');
+					if (result.dull || result.error) return;
+
+					if (result['reached_max_usage']) {
+						upgradePlanIndicEl.classList.add('opacity-100');
+						upgradePlanIndicEl.classList.remove('pointer-events-none');
+						generateBtnEl.classList.add('disabled');
+						return;
+					}
+					window.open('view.html' + obj_to_query(result));
+				});
+			});
+		});
+	</script>
+</html>

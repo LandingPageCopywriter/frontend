@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bricolage-grotesque-light {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 200;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+}
+
+.bricolage-grotesque {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+}
+
+.bricolage-grotesque-bold {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+}
+
+.bricolage-grotesque-bolder {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+}
+
+.text-gradienté {
+	@apply text-transparent bg-clip-text bg-gradient-to-tl from-[#749eba] via-[#53BF9D] to-[#53BF9D];
+}
+
+@keyframes generating {
+	0% {
+		content: '₊˚';
+	}
+	50% {
+		content: '⊹';
+	}
+	100% {
+		content: '₊˚⊹';
+	}
+}
+
+.generating {
+	@apply invert text-black text-start cursor-not-allowed opacity-50 w-52;
+}
+
+.generating:after {
+	content: '';
+	text-align: center;
+	animation: generating infinite ease-out 0.5s 100ms;
+}
+
+.logging-in {
+	@apply cursor-not-allowed opacity-60 w-1/3;
+}
+
+.login-error {
+	@apply text-xl opacity-100;
+}
+
+.disabled {
+	@apply select-none cursor-not-allowed opacity-70;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Create new account</title>
+		<link
+			rel="shortcut icon"
+			href="nobg-logo.png"
+			type="image/x-icon"
+		/>
+		<meta
+			name="description"
+			content="Seemlessly generate all the text & images content for your next landing page!"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="output.css"
+		/>
+	</head>
+	<body
+		class="text-white bg-gray-800 subpixel-antialiased bricolage-grotesque-light"
+	>
+		<nav
+			class="absolute bg-gray-700/50 backdrop-blur-md text-white w-full flex items-center justify-start border-b-4 border-gray-700"
+		>
+			<div class="w-2/3 flex items-center">
+				<img
+					src="logo.png"
+					class="mx-5 drop-shadow-2xl"
+					width="75"
+				/>
+				<h1 class="text-4xl bricolage-grotesque-bolder m-5">
+					<span class="text-[#53BF9D]">Landing</span
+					><span class="text-[#FFF4A3]">Page</span><span>Copywriter</span>
+				</h1>
+			</div>
+		</nav>
+		<!-- CHANGE login url -->
+		<form
+			action="http://localhost:5000/register"
+			method="post"
+			id="register-form"
+			class="grid w-2/5 mx-auto p-5 rounded-sm gap-5 h-dvh items-center content-center"
+		>
+			<div class="grid gap-1">
+				<label
+					for="email"
+					class="text-xl opacity-80"
+					>Enter your email address</label
+				>
+				<input
+					class="text-lg w-2/3 rounded-md px-2 py-0.5 bg-transparent border-2 border-solid border-gray-900"
+					id="email"
+					type="email"
+					name="email"
+					placeholder="some@coolperson.me"
+				/>
+			</div>
+			<div class="grid gap-1">
+				<label
+					for="password"
+					class="text-xl opacity-80"
+					>Enter your password</label
+				>
+
+				<input
+					class="text-lg w-2/3 rounded-md px-2 py-0.5 bg-transparent border-2 border-solid border-gray-900"
+					id="password"
+					name="password"
+					type="password"
+					placeholder="●●●●●●●●"
+				/>
+			</div>
+			<div class="grid gap-1">
+				<label class="text-xl opacity-80">Confirm your password</label>
+
+				<input
+					class="text-lg w-2/3 rounded-md px-2 py-0.5 bg-transparent border-2 border-solid border-gray-900"
+					id="password_check"
+					type="password"
+					placeholder="●●●●●●●●"
+				/>
+			</div>
+			<button
+				class="transition-all ease-out bg-[#AC4062] rounded-md mt-10 px-4 py-0.5 text-xl w-2/5 self-center justify-self-center"
+				onclick="register_acc(this)"
+				type="button"
+			>
+				Sign Up
+			</button>
+			<script>
+				const form = document.getElementById('register-form');
+				const email_el = document.getElementById('email');
+				const passwd_el = document.getElementById('password');
+				const passwd_check_el = document.getElementById('password_check');
+
+				function isBlank(str) {
+					return !str || /^\s*$/.test(str);
+				}
+
+				function register_acc(btn) {
+					if (
+						isBlank(email_el.value) ||
+						isBlank(passwd_el.value) ||
+						isBlank(passwd_check_el.value)
+					)
+						return;
+
+					btn.classList.add('logging-in');
+					if (passwd_el.value != passwd_check_el.value) {
+						alert('Confirm your password please correctly!');
+						btn.classList.remove('logging-in');
+						return;
+					}
+
+					form.submit();
+				}
+			</script>
+			<br />
+		</form>
+	</body>
+</html>
